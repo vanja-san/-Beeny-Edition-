@@ -1,0 +1,20 @@
+{
+  "statusbarCommands.commands": [
+    {
+      "statusBarText": "$(eye) Watch CSS",
+      "command": "workbench.action.terminal.sendSequence",
+      "args": [{ "text": "npm run watch:css\u000D" }],
+      "color": "lightgreen",
+      "tooltipText": "Watch and compile CSS files using Stylus"
+    },
+    {
+      "statusBarText": "$(zap) Build CSS",
+      "command": "workbench.action.terminal.sendSequence",
+      "args": [{ "text": "npm run build:css\u000D" }],
+      "color": "lightgreen",
+      "tooltipText": "Build CSS files using Stylus"
+    }
+  ],
+  "statusbarCommands.alignment": "Left",
+  "statusbarCommands.showErrorWhenNoCommands": true
+}
