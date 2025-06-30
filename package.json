@@ -1,0 +1,24 @@
+{
+  "name": "-beeny-edition-",
+  "version": "1.0.0",
+  "description": "Theme for Shikimori",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "stylus src/styles/main.styl -o dist/css/",
+    "watch:css": "stylus -w src/styles/main.styl -o dist/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanja-san/-Beeny-Edition-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanja-san/-Beeny-Edition-/issues"
+  },
+  "homepage": "https://github.com/vanja-san/-Beeny-Edition-#readme",
+  "devDependencies": {
+    "stylus": "^0.64.0"
+  }
+}

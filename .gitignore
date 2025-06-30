@@ -1,4 +1,16 @@
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+# Dependencies
+node_modules/
+
+# Compiled files
+dist/css/
+dist/js/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace

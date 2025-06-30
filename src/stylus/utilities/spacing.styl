@@ -1,0 +1,51 @@
+// Spacing utilities
+// Created: 2025-06-30 21:12:28 by vanja-san
+
+// Spacing scale
+$spacing-scale = {
+  0: 0
+  1: 0.25rem  // 4px
+  2: 0.5rem   // 8px
+  3: 1rem     // 16px
+  4: 1.5rem   // 24px
+  5: 2rem     // 32px
+  6: 3rem     // 48px
+}
+
+// Generate margin utilities
+for $key, $value in $spacing-scale
+  .m-{$key}
+    margin $value
+  .mx-{$key}
+    margin-left $value
+    margin-right $value
+  .my-{$key}
+    margin-top $value
+    margin-bottom $value
+  .mt-{$key}
+    margin-top $value
+  .mb-{$key}
+    margin-bottom $value
+  .ml-{$key}
+    margin-left $value
+  .mr-{$key}
+    margin-right $value
+
+// Generate padding utilities
+for $key, $value in $spacing-scale
+  .p-{$key}
+    padding $value
+  .px-{$key}
+    padding-left $value
+    padding-right $value
+  .py-{$key}
+    padding-top $value
+    padding-bottom $value
+  .pt-{$key}
+    padding-top $value
+  .pb-{$key}
+    padding-bottom $value
+  .pl-{$key}
+    padding-left $value
+  .pr-{$key}
+    padding-right $value

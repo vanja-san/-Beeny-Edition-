@@ -1,0 +1,154 @@
+// Reset Styles for Shikimori Theme
+// Created: 2025-06-30 21:07:11 by vanja-san
+
+//
+// Base Reset
+//
+
+*, *::before, *::after
+  margin 0
+  padding 0
+  box-sizing border-box
+  -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+
+// Prevent iOS text size adjust after orientation change
+html
+  -webkit-text-size-adjust 100%
+  -ms-text-size-adjust 100%
+  font-size 16px // базовый размер шрифта
+
+body
+  line-height 1.5
+  text-rendering optimizeLegibility
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+//
+// Typography Reset
+//
+
+// Сброс для заголовков (на Shikimori часто используются в карточках аниме/манги)
+h1, h2, h3, h4, h5, h6
+  font-size inherit
+  font-weight inherit
+  margin 0
+
+// Параграфы (для описаний аниме/манги)
+p
+  margin 0
+
+// Списки (для навигации и других элементов)
+ul, ol
+  list-style none
+  margin 0
+  padding 0
+
+//
+// Form Elements
+//
+
+// Кнопки (важно для элементов управления на Shikimori)
+button
+  background none
+  border none
+  padding 0
+  cursor pointer
+  font inherit
+  color inherit
+
+  &:focus
+    outline none
+
+// Поля ввода (для поиска и форм)
+input, textarea, select
+  font inherit
+  margin 0
+  padding 0
+  border none
+  background none
+
+  &:focus
+    outline none
+
+// Убираем синее выделение при тапе на мобильных
+a, button, input, textarea, select
+  -webkit-tap-highlight-color transparent
+
+//
+// Media Elements
+//
+
+// Изображения (важно для обложек аниме/манги)
+img
+  max-width 100%
+  height auto
+  vertical-align middle
+  border 0
+
+// Медиа элементы
+video, audio, canvas, svg
+  display block
+  max-width 100%
+
+//
+// Tables
+//
+
+// Таблицы (для рейтингов и статистики)
+table
+  border-collapse collapse
+  border-spacing 0
+
+//
+// Специфичные элементы Shikimori
+//
+
+// Сброс для блоков контента
+.b-catalog_entry
+.b-anime_status_tag
+.b-user_rate
+  margin 0
+  padding 0
+
+// Сброс для текстовых элементов
+.b-catalog_entry-tooltip
+.b-tooltipped
+  text-decoration none
+
+// Сброс для интерактивных элементов
+.b-link
+.b-button
+  text-decoration none
+  cursor pointer
+
+  &:focus
+    outline none
+
+// Сброс для оверлеев
+.b-modal
+.b-shade
+  margin 0
+  padding 0
+
+//
+// Утилиты
+//
+
+// Скрытие элементов
+.hidden
+  display none !important
+
+// Clearfix
+.clearfix
+  &::after
+    content ''
+    display table
+    clear both
+
+// Запрет выделения
+.no-select
+  user-select none
+
+// Запрет скролла
+.no-scroll
+  overflow hidden
