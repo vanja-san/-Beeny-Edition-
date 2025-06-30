@@ -8,13 +8,15 @@
 // @match        https://shikimori.me/*
 // @grant        none
 // @run-at       document-start
+// @downloadURL  https://cdn.jsdelivr.net/gh/vanja-san/Beeny-Edition@main/js/userscript.js
+// @updateURL    https://cdn.jsdelivr.net/gh/vanja-san/Beeny-Edition@main/js/userscript.js
 // ==/UserScript==
 
 (function() {
     'use strict';
     
-    // Импорт основного JS файла
+    // Используем jsDelivr для загрузки основного скрипта
     const script = document.createElement('script');
-    script.src = 'https://raw.githubusercontent.com/vanja-san/-Beeny-Edition-/main/src/js/main.js';
+    script.src = 'https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/dist/js/main.js';
     document.head.appendChild(script);
 })();
