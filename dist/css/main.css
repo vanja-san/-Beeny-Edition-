@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 16px;
+}
+body {
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+button:focus {
+  outline: none;
+}
+input,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+a,
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+video,
+audio,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.b-catalog_entry,
+.b-anime_status_tag,
+.b-user_rate {
+  margin: 0;
+  padding: 0;
+}
+.b-catalog_entry-tooltip,
+.b-tooltipped {
+  text-decoration: none;
+}
+.b-link,
+.b-button {
+  text-decoration: none;
+  cursor: pointer;
+}
+.b-link:focus,
+.b-button:focus {
+  outline: none;
+}
+.b-modal,
+.b-shade {
+  margin: 0;
+  padding: 0;
+}
+.hidden {
+  display: none !important;
+}
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.no-select {
+  user-select: none;
+}
+.no-scroll {
+  overflow: hidden;
+}
+body {
+  background: #1e1c19;
+  color: #f2e2c4;
+}
+.l-page {
+  background: #1e1c19;
+}
+a color $dark.primary,
+a:hover {
+  color: #d4912b;
+}
+.b-header {
+  color: #f2e2c4;
+  border-bottom: 1px solid #3d3832;
+}
+.b-catalog_entry background $dark.bg-alt,
+.b-catalog_entry border-color $dark.border,
+.b-catalog_entry:hover {
+  background: #363330;
+}
+.b-text {
+  color: #f2e2c4;
+}
+.b-tag background $dark.bg-alt,
+.b-tag color $dark.text-alt,
+.b-tag border-color $dark.border,
+.b-tag:hover {
+  background: #363330;
+}
+.b-nav background $dark.bg-alt.active,
+.b-nav li.active {
+  background: #c17f1e;
+}
+.b-nav background $dark.bg-alt:hover,
+.b-nav li:hover {
+  background: #363330;
+}
+.b-button background $dark.primary,
+.b-button color $dark.text-main,
+.b-button border none,
+.b-button:hover {
+  background: #d4912b;
+}
+.b-button.disabled {
+  background: #a68b62;
+  opacity: 0.7;
+}
+.b-link color $dark.primary,
+.b-link:hover {
+  color: #d4912b;
+}
+.b-button .icon {
+  color: inherit;
+}

@@ -1,0 +1,31 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Stylus
+*.styl text
+*.stylus text
+
+# CSS
+*.css text
+*.map text
+
+# JavaScript
+*.js text
+*.json text
+
+# Images
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Fonts
+*.ttf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
+
+# Documentation
+*.md text
+*.txt text

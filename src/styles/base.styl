@@ -1,0 +1,54 @@
+// Base styles for Shikimori theme
+// Created: 2025-06-30 21:34:37 by vanja-san
+
+// Переопределяем основные цвета сайта
+body
+  background $dark.bg-main
+  color $dark.text-main
+
+// Основной контейнер
+.l-page
+  background $dark.bg-main
+
+// Ссылки
+a
+  color $dark.primary
+  &:hover
+    color $dark.accent
+
+// Заголовки
+.b-header
+  color $dark.text-main
+  border-bottom 1px solid $dark.border
+
+// Блоки контента
+.b-catalog_entry
+  background $dark.bg-alt
+  border-color $dark.border
+
+  &:hover
+    background $dark.bg-hover
+
+// Текст
+.b-text
+  color $dark.text-main
+
+// Метки и теги
+.b-tag
+  background $dark.bg-alt
+  color $dark.text-alt
+  border-color $dark.border
+
+  &:hover
+    background $dark.bg-hover
+
+// Навигация
+.b-nav
+  background $dark.bg-alt
+  
+  li
+    &.active
+      background $dark.primary
+      
+    &:hover
+      background $dark.bg-hover

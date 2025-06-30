@@ -1,0 +1,27 @@
+// Button styles for Shikimori theme
+// Created: 2025-06-30 21:34:37 by vanja-san
+
+// Основные кнопки
+.b-button
+  background $dark.primary
+  color $dark.text-main
+  border none
+
+  &:hover
+    background $dark.accent
+
+  &.disabled
+    background $dark.secondary
+    opacity 0.7
+
+// Кнопки действий
+.b-link
+  color $dark.primary
+  
+  &:hover
+    color $dark.accent
+
+// Иконки в кнопках
+.b-button
+  .icon
+    color inherit

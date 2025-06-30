@@ -1,5 +1,5 @@
 // Stylus Functions
-// Created: 2025-06-30 21:12:28 by vanja-san
+// Created: 2025-06-30 21:31:17 by vanja-san
 
 // Convert px to rem
 rem($px)
@@ -20,7 +20,10 @@ alpha-darken($color, $amount)
 // Calculate contrast ratio
 contrast-ratio($color)
   $luminance = (0.2126 * red($color) + 0.7152 * green($color) + 0.0722 * blue($color)) / 255
-  return if($luminance > 0.5, #000, #fff)
+  if $luminance > 0.5
+    return #000
+  else
+    return #fff
 
 // Z-index function
 z($layer)
