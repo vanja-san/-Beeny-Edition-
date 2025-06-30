@@ -8,8 +8,8 @@
 // @match        https://shikimori.me/*
 // @grant        none
 // @run-at       document-start
-// @downloadURL  https://cdn.jsdelivr.net/gh/vanja-san/Beeny-Edition@main/js/userscript.js
-// @updateURL    https://cdn.jsdelivr.net/gh/vanja-san/Beeny-Edition@main/js/userscript.js
+// @downloadURL  https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/beeny-edition.user.js
+// @updateURL    https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/beeny-edition.user.js
 // ==/UserScript==
 
 (function() {
