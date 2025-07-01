@@ -14,7 +14,7 @@
 // @downloadURL  https://vanja-san.github.io/-Beeny-Edition-/beeny-edition.user.js
 // @updateURL    https://vanja-san.github.io/-Beeny-Edition-/beeny-edition.user.js
 // @require      https://cdn.jsdelivr.net/npm/prettier@3.6.2/standalone.min.js
-// @require      https://cdn.jsdelivr.net/npm/prettier@3.6.2/plugins/postcss.min.js
+// @require      https://cdn.jsdelivr.net/npm/prettier@3.6.2/plugins/parser-postcss.min.js
 // ==/UserScript==
 
 (function() {
