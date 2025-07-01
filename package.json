@@ -2,23 +2,29 @@
   "name": "-beeny-edition-",
   "version": "1.0.0",
   "description": "Theme for Shikimori",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "build:css": "stylus src/styles/main.styl -o dist/css/",
-    "watch:css": "stylus -w src/styles/main.styl -o dist/css/"
+    "build": "postcss src/styles/main.css -o dist/main.css",
+    "watch": "postcss src/styles/main.css -o dist/main.css --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vanja-san/-Beeny-Edition-.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "vanja-san",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vanja-san/-Beeny-Edition-/issues"
   },
   "homepage": "https://github.com/vanja-san/-Beeny-Edition-#readme",
   "devDependencies": {
-    "stylus": "^0.64.0"
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^9.3.0"
   }
 }

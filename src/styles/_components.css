@@ -1,0 +1,35 @@
+/* Карточки аниме/манги */
+.b-catalog_entry {
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+  
+  & img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+  }
+}
+
+/* Кнопки и элементы управления */
+.b-button {
+  padding: var(--gap-sm) var(--gap);
+  background: var(--accent);
+  border-radius: 4px;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+/* Формы и инпуты */
+.b-input {
+  padding: var(--gap-sm);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  
+  &:focus {
+    outline-color: var(--accent);
+  }
+}

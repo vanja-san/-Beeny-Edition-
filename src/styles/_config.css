@@ -1,0 +1,21 @@
+/* Основные переменные */
+:root {
+  /* Цвета */
+  --primary: #2e2e2e;
+  --secondary: #4b5b7b;
+  --accent: #ff6347;
+  
+  /* Размеры */
+  --header-h: 50px;
+  --sidebar-w: 240px;
+  
+  /* Отступы */
+  --gap-sm: 0.5rem;
+  --gap: 1rem;
+  --gap-lg: 2rem;
+}
+
+/* Media queries */
+@custom-media --mobile (width < 768px);
+@custom-media --tablet (768px <= width < 1024px);
+@custom-media --desktop (width >= 1024px);

@@ -1,0 +1,16 @@
+/* Светлая тема (по умолчанию) */
+:root {
+  color-scheme: light dark;
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #212121;
+    --secondary: #2d3748;
+    
+    & .l-content {
+      background: rgba(0, 0, 0, 0.95);
+    }
+  }
+}

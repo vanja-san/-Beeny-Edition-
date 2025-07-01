@@ -1,0 +1,130 @@
+/* Импорты */
+/* Основные переменные */
+:root {
+  /* Цвета */
+  --primary: #2e2e2e;
+  --secondary: #4b5b7b;
+  --accent: #ff6347;
+  
+  /* Размеры */
+  --header-h: 50px;
+  --sidebar-w: 240px;
+  
+  /* Отступы */
+  --gap-sm: 0.5rem;
+  --gap: 1rem;
+  --gap-lg: 2rem;
+}
+/* Media queries */
+/* Header */
+.l-top_menu-v2 {
+  height: 50px;
+  height: var(--header-h);
+  background: #2e2e2e;
+  background: var(--primary);
+}
+.l-top_menu-v2 .logo {
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+  }
+/* Sidebar */
+.l-menu {
+  width: 240px;
+  width: var(--sidebar-w);
+}
+@media (max-width: 767.98px) {
+.l-menu {
+    width: 100%;
+}
+  }
+/* Content */
+.l-content {
+  padding: 1rem;
+  padding: var(--gap);
+}
+@media (min-width: 1024px) {
+.l-content {
+    padding: 2rem;
+    padding: var(--gap-lg);
+}
+  }
+/* Карточки аниме/манги */
+.b-catalog_entry {
+  transition: transform 0.2s ease;
+}
+.b-catalog_entry:hover {
+    transform: scale(1.02);
+  }
+.b-catalog_entry img {
+    aspect-ratio: 3/4;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+/* Кнопки и элементы управления */
+.b-button {
+  padding: 0.5rem 1rem;
+  padding: var(--gap-sm) var(--gap);
+  background: #ff6347;
+  background: var(--accent);
+  border-radius: 4px;
+}
+.b-button:hover {
+    opacity: 0.9;
+  }
+/* Формы и инпуты */
+.b-input {
+  padding: 0.5rem;
+  padding: var(--gap-sm);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.b-input:focus {
+    outline-color: #ff6347;
+    outline-color: var(--accent);
+  }
+/* Светлая тема (по умолчанию) */
+:root {
+  --csstools-color-scheme--dark:  ;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+:root {
+  --csstools-color-scheme--dark: initial;
+}
+}
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #212121;
+    --secondary: #2d3748;
+  }
+    
+    :root .l-content {
+      background: rgba(0, 0, 0, 0.95);
+    }
+}
+/* Глобальные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  background: #2e2e2e;
+  background: var(--primary);
+  color: #fff;
+}
+/* Утилиты */
+.hidden {
+  display: none !important;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}

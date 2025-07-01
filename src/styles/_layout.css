@@ -1,0 +1,28 @@
+/* Header */
+.l-top_menu-v2 {
+  height: var(--header-h);
+  background: var(--primary);
+  
+  & .logo {
+    height: 100%;
+    padding-inline: var(--gap);
+  }
+}
+
+/* Sidebar */
+.l-menu {
+  width: var(--sidebar-w);
+  
+  @media (--mobile) {
+    width: 100%;
+  }
+}
+
+/* Content */
+.l-content {
+  padding: var(--gap);
+  
+  @media (--desktop) {
+    padding: var(--gap-lg);
+  }
+}
