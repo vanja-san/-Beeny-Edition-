@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Beeny Edition for Shikimori
-// @namespace    github.com/vanja-san/-Beeny-Edition-
-// @version      1.0.9
+// @namespace    https://github.com/vanja-san
+// @version      1.0.10
 // @description  Theme enhancements for Shikimori with settings panel
 // @author       vanja-san
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=shikimori.one
@@ -13,8 +13,6 @@
 // @run-at       document-end
 // @downloadURL  https://vanja-san.github.io/-Beeny-Edition-/beeny-edition.user.js
 // @updateURL    https://vanja-san.github.io/-Beeny-Edition-/beeny-edition.user.js
-// @require      https://cdn.jsdelivr.net/npm/prettier@3.6.2/standalone.min.js
-// @require      https://cdn.jsdelivr.net/npm/prettier@3.6.2/plugins/parser-postcss.min.js
 // ==/UserScript==
 
 (function() {
@@ -23,7 +21,6 @@
     // Конфигурация по умолчанию
     const DEFAULT_CONFIG = {
         enableFormatter: true,
-        // Здесь можно добавить другие настройки для новых модулей
     };
 
     // Функции для работы с настройками
@@ -38,6 +35,26 @@
     function saveConfig(config) {
         for (const key in config) {
             GM_setValue(key, config[key]);
+        }
+    }
+
+    // Загрузка Prettier и его зависимостей
+    async function loadPrettier() {
+        try {
+            // Загружаем основной скрипт Prettier
+            await loadScript('https://cdn.jsdelivr.net/npm/prettier@3.6.2/standalone.min.js');
+            // Загружаем парсер CSS
+            await loadScript('https://cdn.jsdelivr.net/npm/prettier@3.6.2/parser-postcss.min.js');
+            
+            // Проверяем, что Prettier загрузился
+            if (typeof window.prettier === 'undefined') {
+                throw new Error('Failed to load Prettier');
+            }
+            
+            return true;
+        } catch (error) {
+            console.error('[Beeny Edition] Error loading Prettier:', error);
+            return false;
         }
     }
 
@@ -91,83 +108,6 @@
         }
     }
 
-    // Добавляем стили для диалога
-    GM_addStyle(`
-        .beeny-settings-dialog {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border: 1px solid #ccc;
-            min-width: 300px;
-            z-index: 9999;
-        }
-
-        .beeny-settings-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .beeny-settings-header h3 {
-            margin: 0;
-            color: #456;
-        }
-
-        .beeny-settings-close {
-            background: none;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-            color: #666;
-            padding: 5px;
-        }
-
-        .beeny-settings-close:hover {
-            color: #456;
-        }
-
-        .beeny-settings-content {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .beeny-settings-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            padding: 5px;
-            border-radius: 4px;
-        }
-
-        .beeny-settings-option:hover {
-            background-color: #f5f5f5;
-        }
-
-        .beeny-settings-option input[type="checkbox"] {
-            width: 16px;
-            height: 16px;
-            cursor: pointer;
-        }
-
-        /* Стили для диалога в браузерах, не поддерживающих <dialog> */
-        .beeny-settings-dialog:not([open]) {
-            display: none;
-        }
-    `);
-
-    // Регистрируем команду в меню Tampermonkey
-    GM_registerMenuCommand('Settings', createSettingsDialog);
-
     // Функция для загрузки скриптов
     function loadScript(url) {
         return new Promise((resolve, reject) => {
@@ -182,7 +122,23 @@
         });
     }
 
-    // Загружаем основной скрипт
-    loadScript('https://vanja-san.github.io/-Beeny-Edition-/src/js/main.js')
-        .catch(error => console.error(error));
+    // Основная инициализация
+    async function initialize() {
+        // Регистрируем команду в меню Tampermonkey
+        GM_registerMenuCommand('Settings', createSettingsDialog);
+
+        // Загружаем Prettier если форматтер включен
+        const config = loadConfig();
+        if (config.enableFormatter) {
+            const prettierLoaded = await loadPrettier();
+            if (prettierLoaded) {
+                // Загружаем основной скрипт только после успешной загрузки Prettier
+                await loadScript('https://vanja-san.github.io/-Beeny-Edition-/src/js/main.js')
+                    .catch(error => console.error(error));
+            }
+        }
+    }
+
+    // Запускаем инициализацию
+    initialize();
 })();

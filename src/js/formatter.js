@@ -101,14 +101,14 @@ function initFormatter() {
             formatButton.disabled = true;
             formatButton.innerHTML = `<span class="material-symbols-rounded">sync</span>`;
 
-            // Проверяем наличие Prettier и его компонентов
+            // Проверяем наличие Prettier
             if (typeof window.prettier === 'undefined') {
                 throw new Error("Prettier is not loaded");
             }
 
             // Базовая конфигурация для Prettier 3.x
             const config = {
-                parser: "css",
+                parser: "postcss",
                 printWidth: 80,
                 tabWidth: 2,
                 useTabs: false,
