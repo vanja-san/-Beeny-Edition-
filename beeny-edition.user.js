@@ -18,8 +18,20 @@
 (function() {
     'use strict';
     
-    // Используем jsDelivr для загрузки основного скрипта
-    const script = document.createElement('script');
-    script.src = 'https://vanja-san.github.io/-Beeny-Edition-/src/js/main.js';
-    document.head.appendChild(script);
+    function loadScript(url) {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = url;
+            script.async = true;
+            
+            script.onload = () => resolve();
+            script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${url}`));
+            
+            document.head.appendChild(script);
+        });
+    }
+    
+    loadScript('https://vanja-san.github.io/-Beeny-Edition-/src/js/main.js')
+        .then(() => console.log('Скрипт успешно загружен'))
+        .catch(error => console.error(error));
 })();
