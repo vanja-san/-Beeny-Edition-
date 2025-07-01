@@ -10,6 +10,8 @@
 // @run-at       document-start
 // @downloadURL  https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/beeny-edition.user.js
 // @updateURL    https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/beeny-edition.user.js
+// @require      https://cdn.jsdelivr.net/npm/prettier@3.6.2/standalone.min.js
+// @require      https://cdn.jsdelivr.net/npm/prettier@3.6.2/plugins/postcss.min.js
 // ==/UserScript==
 
 (function() {
