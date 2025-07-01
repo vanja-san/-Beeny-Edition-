@@ -24,14 +24,13 @@
             script.src = url;
             script.async = true;
             
-            script.onload = () => resolve();
-            script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${url}`));
+            script.onload = resolve;
+            script.onerror = () => reject(new Error(`[Beeny Edition] Ошибка загрузки скрипта ${url}`));
             
             document.head.appendChild(script);
         });
     }
     
     loadScript('https://vanja-san.github.io/-Beeny-Edition-/src/js/main.js')
-        .then(() => console.log('Скрипт успешно загружен'))
         .catch(error => console.error(error));
 })();
