@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Beeny Edition for Shikimori
 // @namespace    https://github.com/vanja-san
-// @version      1.0.1
+// @version      1.0.2
 // @description  Theme enhancements for Shikimori
 // @author       vanja-san
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=shikimori.one
@@ -20,6 +20,6 @@
     
     // Используем jsDelivr для загрузки основного скрипта
     const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/dist/js/main.js';
+    script.src = 'https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/src/js/main.js';
     document.head.appendChild(script);
 })();
