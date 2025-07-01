@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Beeny Edition for Shikimori
 // @namespace    https://github.com/vanja-san
-// @version      1.0.0
+// @version      1.0.1
 // @description  Theme enhancements for Shikimori
 // @author       vanja-san
 // @match        https://shikimori.one/*
