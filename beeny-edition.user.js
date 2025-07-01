@@ -9,8 +9,8 @@
 // @match        https://shikimori.me/*
 // @grant        none
 // @run-at       document-start
-// @downloadURL  https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/beeny-edition.user.js
-// @updateURL    https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/beeny-edition.user.js
+// @downloadURL  https://vanja-san.github.io/-Beeny-Edition-/beeny-edition.user.js
+// @updateURL    https://vanja-san.github.io/-Beeny-Edition-/beeny-edition.user.js
 // @require      https://cdn.jsdelivr.net/npm/prettier@3.6.2/standalone.min.js
 // @require      https://cdn.jsdelivr.net/npm/prettier@3.6.2/plugins/postcss.min.js
 // ==/UserScript==
@@ -20,6 +20,6 @@
     
     // Используем jsDelivr для загрузки основного скрипта
     const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/gh/vanja-san/-Beeny-Edition-@main/src/js/main.js';
+    script.src = 'https://vanja-san.github.io/-Beeny-Edition-/src/js/main.js';
     document.head.appendChild(script);
 })();
