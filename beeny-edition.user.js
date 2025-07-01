@@ -4,6 +4,7 @@
 // @version      1.0.1
 // @description  Theme enhancements for Shikimori
 // @author       vanja-san
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=shikimori.one
 // @match        https://shikimori.one/*
 // @match        https://shikimori.me/*
 // @grant        none
