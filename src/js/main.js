@@ -1,9 +1,10 @@
 // Основной файл, который управляет всеми модулями
 async function initializeModules() {
-    // Загружаем и инициализируем модули в зависимости от настроек
-    const config = loadConfig();
+    // Получаем настройки через GM_getValue напрямую
+    const enableFormatter = typeof GM_getValue === 'function' ? 
+        GM_getValue('enableFormatter', true) : true;
 
-    if (config.enableFormatter) {
+    if (enableFormatter) {
         try {
             await loadScript('https://vanja-san.github.io/-Beeny-Edition-/src/js/formatter.js');
             // После загрузки formatter.js, функция waitForEditor будет доступна глобально
@@ -17,7 +18,7 @@ async function initializeModules() {
 
     // Здесь можно добавить загрузку других модулей
     // например:
-    // if (config.enableAnotherFeature) {
+    // if (GM_getValue('enableAnotherFeature', true)) {
     //     await loadScript('https://vanja-san.github.io/-Beeny-Edition-/src/js/another-feature.js');
     // }
 }
@@ -34,15 +35,6 @@ function loadScript(url) {
 
         document.head.appendChild(script);
     });
-}
-
-// Загрузка конфигурации
-function loadConfig() {
-    const savedConfig = {};
-    for (const key in DEFAULT_CONFIG) {
-        savedConfig[key] = GM_getValue(key, DEFAULT_CONFIG[key]);
-    }
-    return savedConfig;
 }
 
 // Инициализация при загрузке страницы
