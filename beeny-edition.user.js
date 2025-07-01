@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Beeny Edition for Shikimori
-// @namespace    https://github.com/vanja-san
-// @version      1.0.8-a
+// @namespace    github.com/vanja-san/-Beeny-Edition-
+// @version      1.0.9
 // @description  Theme enhancements for Shikimori with settings panel
 // @author       vanja-san
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=shikimori.one
